@@ -32,7 +32,7 @@ const SignUp = ({ history }) => {
   const dispatch = useDispatch();
 
   useScrollTop();
-  useDocumentTitle('Sign Up | Salinaka');
+  useDocumentTitle('Sign Up | LikeAura');
 
   useEffect(() => () => {
     dispatch(setAuthStatus(null));
@@ -68,7 +68,7 @@ const SignUp = ({ history }) => {
           )}
           <div className={`auth ${authStatus?.message && (!authStatus?.success && 'input-error')}`}>
             <div className="auth-main">
-              <h3>Sign up to Salinaka</h3>
+              <h3>Sign up to LikeAura</h3>
               <Formik
                 initialValues={{
                   fullname: '',
@@ -118,6 +118,7 @@ const SignUp = ({ history }) => {
                         className="button auth-button"
                         disabled={isAuthenticating}
                         type="submit"
+                        style={{backgroundColor: '#f27120', borderRadius: '1rem'}}
                       >
                         {isAuthenticating ? 'Signing Up' : 'Sign Up'}
                         &nbsp;
@@ -128,10 +129,6 @@ const SignUp = ({ history }) => {
                 )}
               </Formik>
             </div>
-            <div className="auth-divider">
-              <h6>OR</h6>
-            </div>
-            <SocialLogin isLoading={isAuthenticating} />
           </div>
           <div className="auth-message">
             <span className="auth-info">
@@ -142,6 +139,7 @@ const SignUp = ({ history }) => {
               disabled={isAuthenticating}
               onClick={onClickSignIn}
               type="button"
+              style={{backgroundColor: '#f27120', borderRadius: '1rem'}}
             >
               Sign In
             </button>

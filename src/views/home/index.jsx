@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-  useDocumentTitle('Salinaka | Home');
+  useDocumentTitle('Likeaura');
   useScrollTop();
 
   const {
@@ -33,16 +33,16 @@ const Home = () => {
         <div className="banner">
           <div className="banner-desc">
             <h1 className="text-thin">
-              <strong>See</strong>
-              &nbsp;everything with&nbsp;
-              <strong>Clarity</strong>
+              <strong style={{color: '#f27120'}}>The Fashion</strong>
+              &nbsp;that never fades&nbsp;
+              <strong style={{color: '#f27120'}}>away</strong>
             </h1>
             <p>
-              Buying eyewear should leave you happy and good-looking, with money in your pocket.
-              Glasses, sunglasses, and contacts—we’ve got your eyes covered.
+              Buying clothes,fashion materials should leave you happy and good-looking, with money in your pocket.
+              Clothes, Pants, and Accessories—we’ve got your fashion covered.
             </p>
             <br />
-            <Link to={SHOP} className="button">
+            <Link to={SHOP} style={{backgroundColor: '#f27120', borderRadius: '1rem'}} className="button">
               Shop Now &nbsp;
               <ArrowRightOutlined />
             </Link>

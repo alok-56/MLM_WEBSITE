@@ -29,7 +29,7 @@ const SignIn = ({ history }) => {
   const dispatch = useDispatch();
 
   useScrollTop();
-  useDocumentTitle('Sign In | Salinaka');
+  useDocumentTitle('Sign In | LikeAura');
 
   useEffect(() => () => {
     dispatch(setAuthStatus(null));
@@ -63,9 +63,9 @@ const SignIn = ({ history }) => {
               {authStatus?.message}
             </h5>
           )}
-          <div className={`auth ${authStatus?.message && (!authStatus?.success && 'input-error')}`}>
+          <div style={{borderRadius:'2rem'}} className={`auth ${authStatus?.message && (!authStatus?.success && 'input-error')}`}>
             <div className="auth-main">
-              <h3>Sign in to Salinaka</h3>
+              <h3>Sign in to Likeaura</h3>
               <br />
               <div className="auth-wrapper">
                 <Formik
@@ -112,6 +112,7 @@ const SignIn = ({ history }) => {
                           className="button auth-button"
                           disabled={isAuthenticating}
                           type="submit"
+                          style={{backgroundColor: '#f27120', borderRadius: '1rem'}}
                         >
                           {isAuthenticating ? 'Signing In' : 'Sign In'}
                           &nbsp;
@@ -124,9 +125,7 @@ const SignIn = ({ history }) => {
               </div>
             </div>
             <div className="auth-divider">
-              <h6>OR</h6>
             </div>
-            <SocialLogin isLoading={isAuthenticating} />
           </div>
           <div className="auth-message">
             <span className="auth-info">
@@ -137,6 +136,7 @@ const SignIn = ({ history }) => {
               disabled={isAuthenticating}
               onClick={onSignUp}
               type="button"
+              style={{backgroundColor: '#f27120', borderRadius: '1rem'}}
             >
               Sign Up
             </button>

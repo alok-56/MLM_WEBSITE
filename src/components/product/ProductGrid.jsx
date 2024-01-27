@@ -16,6 +16,7 @@ const ProductGrid = ({ products }) => {
         />
       )) : products.map((product) => (
         <ProductItem
+          style={{color: 'red'}}
           key={product.id}
           isItemOnBasket={isItemOnBasket}
           addToBasket={addToBasket}

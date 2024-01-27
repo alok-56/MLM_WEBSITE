@@ -28,6 +28,7 @@ const ProductItem = ({ product, isItemOnBasket, addToBasket }) => {
       <div
         className={`product-card ${!product.id ? 'product-loading' : ''}`}
         style={{
+          borderRadius: '1rem',
           border: product && itemOnBasket ? '1px solid #a6a5a5' : '',
           boxShadow: product && itemOnBasket ? '0 10px 15px rgba(0, 0, 0, .07)' : 'none'
         }}
@@ -63,6 +64,7 @@ const ProductItem = ({ product, isItemOnBasket, addToBasket }) => {
           <button
             className={`product-card-button button-small button button-block ${itemOnBasket ? 'button-border button-border-gray' : ''}`}
             onClick={handleAddToBasket}
+            style={{backgroundColor: ''}}
             type="button"
           >
             {itemOnBasket ? 'Remove from basket' : 'Add to basket'}
